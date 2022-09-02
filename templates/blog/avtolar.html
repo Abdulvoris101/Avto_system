@@ -1,0 +1,47 @@
+{% extends 'blog/main.html' %}
+
+{% load static %}
+{% block title %}
+  Sardor Auto barchasi
+{% endblock title %}
+{% block content %}
+
+<div  class="car">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="titlepage">
+                <h2>VARIETY OF CARS </h2>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</span>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+        
+        {% for avto in avtolar %}
+        <div class="col-md-4 padding_leri">
+           <div class="car_box">
+              <figure><img src="{{ avto.images.url }}" alt="#"/></figure>
+              <h3>{{ avto.nomi }}</h3>
+           </div>
+        </div>
+        {% endfor %}
+           
+          
+          {% comment %} <div class="col-md-4 padding_leri">
+             <div class="car_box">
+                <figure><img src="images/car_img2.png" alt="#"/></figure>
+                <h3>Audi</h3>
+             </div>
+          </div>
+          <div class="col-md-4 padding_leri">
+             <div class="car_box">
+                <figure><img src="images/car_img3.png" alt="#"/></figure>
+                <h3>Bmw x5</h3>
+             </div>
+          </div> {% endcomment %}
+       </div>
+    </div>
+ </div>
+
+ {% endblock content %}
